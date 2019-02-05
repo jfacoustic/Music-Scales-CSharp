@@ -3,7 +3,7 @@ namespace MusicLib
 {
     // Future:  implement enharmonics
     enum Chromatic { A, As, B, C, Cs, D, Ds, E, F, Fs, G, Gs };
-
+    
     interface IMusicScale
     {
          Chromatic NextNote();
@@ -52,7 +52,7 @@ namespace MusicLib
 
         public void PrintScale()
         {
-            Console.WriteLine("Scale: " + BaseNote);
+            Console.WriteLine("Scale: " + BaseNote + " Major");
             for(int i = 0; i < 7; i++)
             {
                 Console.WriteLine(this.Note + " " + this.Frequency() + " Hz");
@@ -88,7 +88,7 @@ namespace MusicLib
         // Not DRY at all :(
         public void PrintScale()
         {
-            Console.WriteLine("Scale: " + BaseNote);
+            Console.WriteLine("Scale: " + BaseNote + " Minor");
             for (int i = 0; i < 7; i++)
             {
                 Console.WriteLine(this.Note + " " + this.Frequency() + " Hz");
